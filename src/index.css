@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@layer utilities {
+  .flex_item{
+    @apply flex justify-center items-center gap-x-2
+  }
+  .flex_item_menu{
+    @apply flex justify-start items-center gap-x-1 px-3
+  }
+  .li_menuList{
+    @apply block w-full
+  }
+  .animation-fade{
+    @apply transition-all delay-75 duration-150 ease-in-out
+  }
+  .ellips {
+    @apply  text-ellipsis overflow-hidden
+  }
+  .polygon-right{
+    clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
+  }
+  .polygon-left{
+    clip-path: polygon(3% 0%, 100% 0%,100% 100%, 0% 100%);
+  }
+  .polygon-left-sm{
+    clip-path: polygon(2% 0%, 100% 0%,100% 100%, 0% 100%);
+  }
+  .border-table{
+    @apply border-t border-b border-slate-100
+  }
+  .radius-left{
+    border-radius: 34px 15px 15px 15px;
+  }
+  .radius-right{
+    border-radius: 15px 15px 34px 15px;
+  }
+}
+@layer base {
+  @font-face {
+    font-family: 'sans';
+    src: url('./assets/fonts/TitilliumWeb-Regular.ttf');
+  }
+}
